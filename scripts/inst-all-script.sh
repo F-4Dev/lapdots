@@ -1,28 +1,28 @@
 #!/bin/sh
 echo "welcome back :)"
 
-echo "\\n[installing prequesits  ...]"
+echo "\\\n[installing prequesits  ...]"
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-echo "\\n[installing dank linux]"
+echo "\\\n[installing dank linux]"
 curl -fsSL https://install.danklinux.com | sh
 
-echo "\\n[cloning repo ...]"
+echo "\\\n[cloning repo ...]"
 git clone https://github.com/F-4Dev/lapdots.git tmp && cd tmp
 
-echo "\\n[installing packages ...]"
+echo "\\\n[installing packages ...]"
 yay --noconfirm -S  $(cat packages)
 
-echo "\\n[zsh ...]"
+echo "\\\n[zsh ...]"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh)
 
-echo "\\n[enabling hyprexpo ...]"
+echo "\\\n[enabling hyprexpo ...]"
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm enable hyprexpo
 hyprpm reload
 
-echo "\\n[moving files ...]"
+echo "\\\n[moving files ...]"
 cp hyprland.conf ~/.config/hypr/hyprland.conf
 cp dms/binds.conf ~/.config/hypr/dms/binds.conf
 cp .zshrc ~/.zshrc
@@ -30,12 +30,12 @@ cp .gitignore ~/.config/hypr/.gitignore
 cp VSCodium/* .config/VSCodium/User/
 mkdir -p Pictures/wallpaper && mv wallpaper/* Pictures/wallpaper/
 
-echo "\\n[system will now reboot, until we meet again :) ]"
+echo "\\\n[system will now reboot, until we meet again :) ]"
 sleep 1
-echo "1\\n"
+echo "1\\\n"
 sleep 1
-echo "2\\n"
+echo "2\\\n"
 sleep 1
-echo "3\\n"
+echo "3\\\n"
 sleep 1
 sudo reboot now
