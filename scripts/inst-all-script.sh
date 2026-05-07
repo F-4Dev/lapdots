@@ -32,10 +32,10 @@ mkdir -p Pictures/wallpaper && mv wallpaper/* Pictures/wallpaper/
 
 echo "[system will now reboot, until we meet again :) ]"
 sleep 1
-echo "1\
+echo "1"
 sleep 1
-echo "2\
+echo "2"
 sleep 1
-echo "3\
+echo "3"
 sleep 1
 sudo reboot now
