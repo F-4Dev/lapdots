@@ -2,7 +2,7 @@
 echo "welcome back :)"
 
 echo "[installing prequesits  ...]"
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && \
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 echo "[installing dank linux]"
 curl -fsSL https://install.danklinux.com | sh
